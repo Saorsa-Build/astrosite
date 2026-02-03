@@ -3,19 +3,19 @@ import logo from '../assets/logo.svg';
 ---
 
 <nav class="border-b border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))]">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 max-w-[1200px]">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a 
         href="/" 
         class="flex items-center space-x-2 text-[hsl(var(--color-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
       >
-        <img src={logo.src} alt="Logo" class="h-16 w-16" />
-        <span class="font-semibold text-lg">Saorsa Media</span>
+        <img src={logo.src} alt="Logo" class="h-12 w-12 md:h-16 md:w-16" />
+        <span class="font-semibold text-base md:text-lg">Saorsa Media</span>
       </a>
 
       <!-- Navigation Links -->
-      <div class="flex items-center space-x-6">
+      <div class="flex items-center space-x-4 md:space-x-8">
         <a 
           href="/" 
           class="text-sm font-medium text-[hsl(var(--color-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"

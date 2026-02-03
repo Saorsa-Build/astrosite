@@ -1,0 +1,89 @@
+---
+// Footer.astro component
+import bluesky from '../assets/socials/bluesky.png';
+import instagram from '../assets/socials/instagram.svg';
+import linkedin from '../assets/socials/linkedin.png';
+---
+
+<footer class="border-t border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))] py-16">
+  <div class="container mx-auto px-4 max-w-[1200px]">
+    <div class="grid md:grid-cols-3 gap-12">
+      <!-- Left side - Brand -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-[hsl(var(--color-foreground))]">Saorsa Media</h3>
+        <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+            Your Digital Operations Partner
+        </p>
+        <p class="text-xs text-[hsl(var(--color-muted-foreground))]">
+            Based in Windsor, Ontario
+        </p>
+    </div>
+
+      <!-- Middle - Contact Info -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--color-foreground))]">Contact</h3>
+        <div class="space-y-2 text-sm text-[hsl(var(--color-muted-foreground))]">
+          <p>
+            <a href="mailto:info@saorsa.ca" class="hover:text-[hsl(var(--color-foreground))] transition-colors no-underline">
+              info@saorsa.ca
+            </a>
+          </p>
+          <p>
+            <a href="tel:+15483891145" class="hover:text-[hsl(var(--color-foreground))] transition-colors no-underline">
+              +1 (548) 389-1145
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Right side - Social Media -->
+      <div class="space-y-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-[hsl(var(--color-foreground))]">Follow Us</h3>
+        <div class="flex gap-3">
+          <a 
+            href="https://www.instagram.com/saorsamedia/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-10 h-10 border border-[hsl(var(--color-border))] rounded-md flex items-center justify-center hover:border-[hsl(var(--color-foreground))] hover:scale-110 transition-all p-2"
+            aria-label="Instagram"
+          >
+            <img src={instagram.src} alt="Instagram" class="w-full h-full object-contain" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/company/saorsamedia/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-10 h-10 border border-[hsl(var(--color-border))] rounded-md flex items-center justify-center hover:border-[hsl(var(--color-foreground))] hover:scale-110 transition-all p-2"
+            aria-label="LinkedIn"
+          >
+            <img src={linkedin.src} alt="LinkedIn" class="w-full h-full object-contain" />
+          </a>
+          <a 
+            href="https://bsky.app/profile/saorsamedia.bsky.social" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-10 h-10 border border-[hsl(var(--color-border))] rounded-md flex items-center justify-center hover:border-[hsl(var(--color-foreground))] hover:scale-110 transition-all p-2"
+            aria-label="Bluesky"
+          >
+            <img src={bluesky.src} alt="Bluesky" class="w-full h-full object-contain" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Links & Copyright -->
+    <div class="mt-12 pt-8 border-t border-[hsl(var(--color-border))]">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[hsl(var(--color-muted-foreground))]">
+        <p>&copy; {new Date().getFullYear()} Saorsa Media. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="/terms" class="hover:text-[hsl(var(--color-foreground))] transition-colors no-underline">
+            Terms of Service
+          </a>
+          <a href="/privacy" class="hover:text-[hsl(var(--color-foreground))] transition-colors no-underline">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
