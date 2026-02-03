@@ -2,29 +2,60 @@
 import logo from '../assets/logo.svg';
 ---
 
-<nav class="border-b border-[hsl(var(--color-border))] bg-[hsl(var(--color-background))]">
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-[hsl(var(--color-border))] bg-[hsl(var(--color-nav-background))] backdrop-blur-sm bg-opacity-95">
   <div class="container mx-auto px-4 max-w-[1200px]">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
       <a 
         href="/" 
-        class="flex items-center space-x-2 text-[hsl(var(--color-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
+        class="flex items-center space-x-2 text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
       >
-        <img src={logo.src} alt="Logo" class="h-12 w-12 md:h-16 md:w-16" />
-        <span class="font-semibold text-base md:text-lg">Saorsa Media</span>
+        <img src={logo.src} alt="Logo" class="h-12 w-12" />
+        <span class="font-semibold text-base md:text-lg hidden sm:inline">Saorsa Media</span>
       </a>
 
-      <!-- Navigation Links -->
-      <div class="flex items-center space-x-4 md:space-x-8">
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center space-x-8">
         <a 
           href="/" 
-          class="text-sm font-medium text-[hsl(var(--color-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
+          class="text-sm font-medium text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
         >
           Home
         </a>
         <a 
           href="/services" 
-          class="text-sm font-medium text-[hsl(var(--color-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
+          class="text-sm font-medium text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
+        >
+          Services
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-md text-[hsl(var(--color-nav-foreground))] hover:bg-[hsl(0,0%,15%)] transition-all"
+        aria-label="Toggle menu"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path class="hamburger-top" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+          <path class="hamburger-middle" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+          <path class="hamburger-bottom" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden overflow-hidden transition-all duration-300 ease-in-out">
+      <div class="flex flex-col space-y-1 py-4 border-t border-[hsl(0,0%,20%)]">
+        <a 
+          href="/" 
+          class="text-sm font-medium text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] hover:bg-[hsl(0,0%,15%)] transition-colors no-underline py-3 px-4 rounded-md"
+        >
+          Home
+        </a>
+        <a 
+          href="/services" 
+          class="text-sm font-medium text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] hover:bg-[hsl(0,0%,15%)] transition-colors no-underline py-3 px-4 rounded-md"
         >
           Services
         </a>
@@ -32,3 +63,48 @@ import logo from '../assets/logo.svg';
     </div>
   </div>
 </nav>
+
+<!-- Spacer to prevent content from hiding under fixed nav -->
+<div class="h-16"></div>
+
+<style>
+  #mobile-menu-button.open #hamburger-icon {
+    transform: rotate(90deg);
+  }
+
+  #mobile-menu-button.open .hamburger-top {
+    d: path("M6 18L18 6");
+  }
+
+  #mobile-menu-button.open .hamburger-middle {
+    opacity: 0;
+  }
+
+  #mobile-menu-button.open .hamburger-bottom {
+    d: path("M6 6L18 18");
+  }
+
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenuButton.classList.toggle('open');
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuButton?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+      mobileMenuButton?.classList.remove('open');
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+</script>
