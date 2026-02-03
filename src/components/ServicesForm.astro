@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Services - Saorsa Media">
+  <section class="py-20 md:py-32">
+    <div class="container mx-auto px-4 max-w-[800px]">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-[hsl(var(--color-foreground))] mb-4">
+          Our Services
+        </h1>
+        <p class="text-lg text-[hsl(var(--color-muted-foreground))]">
+          Select the services you're interested in and we'll get back to you.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form
+        action="https://formspree.io/f/mojlondj"
+        method="POST"
+        class="space-y-8"
+      >
+        <!-- Contact Information -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-semibold text-[hsl(var(--color-foreground))]">Contact Information</h2>
+          
+          <div>
+            <label for="name" class="block text-sm font-medium text-[hsl(var(--color-foreground))] mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-2 border border-[hsl(var(--color-border))] rounded-md focus:outline-none focus:ring-2 focus:ring-[hsl(var(--color-primary))]"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-[hsl(var(--color-foreground))] mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2 border border-[hsl(var(--color-border))] rounded-md focus:outline-none focus:ring-2 focus:ring-[hsl(var(--color-primary))]"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-[hsl(var(--color-foreground))] mb-2">
+              Phone (optional)
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="w-full px-4 py-2 border border-[hsl(var(--color-border))] rounded-md focus:outline-none focus:ring-2 focus:ring-[hsl(var(--color-primary))]"
+            />
+          </div>
+        </div>
+
+        <!-- Services Selection -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-semibold text-[hsl(var(--color-foreground))]">Select Services</h2>
+          
+          <div class="space-y-3">
+            <label class="flex items-start space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="services"
+                value="Website Development"
+                class="mt-1 h-4 w-4 text-[hsl(var(--color-primary))] border-[hsl(var(--color-border))] rounded focus:ring-[hsl(var(--color-primary))]"
+              />
+              <div>
+                <span class="font-medium text-[hsl(var(--color-foreground))]">Website Development</span>
+                <p class="text-sm text-[hsl(var(--color-muted-foreground))]">Custom websites and web applications</p>
+              </div>
+            </label>
+
+            <label class="flex items-start space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="services"
+                value="Social Media Management"
+                class="mt-1 h-4 w-4 text-[hsl(var(--color-primary))] border-[hsl(var(--color-border))] rounded focus:ring-[hsl(var(--color-primary))]"
+              />
+              <div>
+                <span class="font-medium text-[hsl(var(--color-foreground))]">Social Media Management</span>
+                <p class="text-sm text-[hsl(var(--color-muted-foreground))]">Content creation and social media strategy</p>
+              </div>
+            </label>
+
+            <label class="flex items-start space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="services"
+                value="Content Capture"
+                class="mt-1 h-4 w-4 text-[hsl(var(--color-primary))] border-[hsl(var(--color-border))] rounded focus:ring-[hsl(var(--color-primary))]"
+              />
+              <div>
+                <span class="font-medium text-[hsl(var(--color-foreground))]">Content Capture</span>
+                <p class="text-sm text-[hsl(var(--color-muted-foreground))]">Professional photo and video production</p>
+              </div>
+            </label>
+
+            <label class="flex items-start space-x-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="services"
+                value="IT Support"
+                class="mt-1 h-4 w-4 text-[hsl(var(--color-primary))] border-[hsl(var(--color-border))] rounded focus:ring-[hsl(var(--color-primary))]"
+              />
+              <div>
+                <span class="font-medium text-[hsl(var(--color-foreground))]">IT Support</span>
+                <p class="text-sm text-[hsl(var(--color-muted-foreground))]">Technical support and troubleshooting</p>
+              </div>
+            </label>
+
+            <!-- Add more services here by copying the label block above -->
+          </div>
+        </div>
+
+        <!-- Additional Message -->
+        <div>
+          <label for="message" class="block text-sm font-medium text-[hsl(var(--color-foreground))] mb-2">
+            Tell us about your project (optional)
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="w-full px-4 py-2 border border-[hsl(var(--color-border))] rounded-md focus:outline-none focus:ring-2 focus:ring-[hsl(var(--color-primary))]"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button
+            type="submit"
+            class="w-full px-6 py-3 bg-[hsl(var(--color-primary))] text-[hsl(var(--color-primary-foreground))] rounded-md font-medium hover:opacity-90 transition-opacity"
+          >
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>
