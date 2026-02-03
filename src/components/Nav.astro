@@ -10,7 +10,7 @@ import logo from '../assets/logo.svg';
         href="/" 
         class="flex items-center space-x-2 text-[hsl(var(--color-nav-foreground))] hover:text-[hsl(var(--color-primary))] transition-colors no-underline"
       >
-        <img src={logo.src} alt="Logo" class="h-12 w-12" />
+        <img src={logo.src} alt="Logo" class="h-16 w-16" />
         <span class="font-semibold text-base md:text-lg hidden sm:inline">Saorsa Media</span>
       </a>
 
@@ -33,14 +33,14 @@ import logo from '../assets/logo.svg';
       <!-- Mobile Menu Button -->
       <button 
         id="mobile-menu-button"
-        class="md:hidden p-2 rounded-md text-[hsl(var(--color-nav-foreground))] hover:bg-[hsl(0,0%,15%)] transition-all"
+        class="md:hidden p-3 rounded-md text-[hsl(var(--color-nav-foreground))] hover:bg-[hsl(0,0%,15%)] transition-all"
         aria-label="Toggle menu"
       >
-        <svg id="hamburger-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path class="hamburger-top" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
-          <path class="hamburger-middle" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
-          <path class="hamburger-bottom" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
-        </svg>
+        <div class="hamburger-container">
+          <span class="hamburger-line top"></span>
+          <span class="hamburger-line middle"></span>
+          <span class="hamburger-line bottom"></span>
+        </div>
       </button>
     </div>
 
@@ -68,26 +68,48 @@ import logo from '../assets/logo.svg';
 <div class="h-16"></div>
 
 <style>
-  #mobile-menu-button.open #hamburger-icon {
-    transform: rotate(90deg);
+  .hamburger-container {
+    position: relative;
+    width: 20px;
+    height: 14px;
   }
 
-  #mobile-menu-button.open .hamburger-top {
-    d: path("M6 18L18 6");
+  .hamburger-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
   }
 
-  #mobile-menu-button.open .hamburger-middle {
+  .hamburger-line.top {
+    top: 0;
+  }
+
+  .hamburger-line.middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger-line.bottom {
+    bottom: 0;
+  }
+
+  /* Open state */
+  #mobile-menu-button.open .hamburger-line.top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  #mobile-menu-button.open .hamburger-line.middle {
     opacity: 0;
   }
 
-  #mobile-menu-button.open .hamburger-bottom {
-    d: path("M6 6L18 18");
-  }
-
-  .hamburger-top,
-  .hamburger-middle,
-  .hamburger-bottom {
-    transition: all 0.3s ease-in-out;
+  #mobile-menu-button.open .hamburger-line.bottom {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
   }
 </style>
 
