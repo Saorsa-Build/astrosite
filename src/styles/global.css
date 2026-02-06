@@ -11,8 +11,8 @@
   --color-popover: 0 0% 12%;
   --color-popover-foreground: 0 0% 98%;
   
-  /* Emerald primary color */
-  --color-primary: 158 64% 52%; /* Emerald-500 */
+  /* Orange primary color */
+  --color-primary: 25 95% 53%; /* Orange-500 */
   --color-primary-foreground: 0 0% 100%;
   
   /* Dark gray for secondary elements */
@@ -23,8 +23,8 @@
   --color-muted: 0 0% 15%;
   --color-muted-foreground: 0 0% 65%;
   
-  /* Emerald accent */
-  --color-accent: 160 84% 39%; /* Emerald-600 for hover states */
+  /* Orange accent */
+  --color-accent: 27 96% 61%; /* Orange-400 for hover states - slightly lighter */
   --color-accent-foreground: 0 0% 100%;
   
   --color-destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
   /* Subtle borders for dark theme */
   --color-border: 0 0% 20%;
   --color-input: 0 0% 20%;
-  --color-ring: 158 64% 52%;
+  --color-ring: 25 95% 53%;
   --radius: 0.5rem;
   
   /* Nav - even darker */
