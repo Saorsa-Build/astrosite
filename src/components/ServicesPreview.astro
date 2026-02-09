@@ -1,5 +1,6 @@
 ---
 // ServicesPreview.astro component
+import business from '../assets/services/business.jpg';
 ---
 
 <section class="py-20 md:py-32">
@@ -35,9 +36,9 @@
         </div>
       </div>
       
-      <!-- Right side - Placeholder -->
-      <div class="aspect-square bg-gradient-to-br from-[hsl(var(--color-muted))] to-[hsl(var(--color-border))] rounded-lg flex items-center justify-center">
-        <span class="text-[hsl(var(--color-muted-foreground))] text-sm">Image placeholder</span>
+      <!-- Right side - Image -->
+      <div class="aspect-square rounded-lg overflow-hidden">
+        <img src={business.src} alt="Business professionals collaborating" class="w-full h-full object-cover" />
       </div>
     </div>
   </div>

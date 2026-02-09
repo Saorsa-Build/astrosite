@@ -1,0 +1,201 @@
+---
+// Experience.astro component
+---
+
+<section class="py-20 md:py-32 bg-[hsl(var(--color-muted))]">
+  <div class="container mx-auto px-4 max-w-[1000px]">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[hsl(var(--color-foreground))] mb-8">
+        Experience & Education
+      </h2>
+      
+      <!-- Toggle -->
+      <div class="inline-flex rounded-xl border-2 border-[hsl(var(--color-border))] bg-[hsl(var(--color-card))] p-1.5 shadow-sm">
+        <button 
+          id="work-tab"
+          class="tab-button active px-8 py-3 rounded-lg text-sm font-semibold transition-all"
+        >
+          Work Experience
+        </button>
+        <button 
+          id="education-tab"
+          class="tab-button px-8 py-3 rounded-lg text-sm font-semibold transition-all"
+        >
+          Education
+        </button>
+      </div>
+    </div>
+
+    <!-- Work Experience Content -->
+    <div id="work-content" class="content-section space-y-4 max-w-[800px] mx-auto">
+      <!-- Example Work Card 1 -->
+      <a 
+        href="https://example-company.com" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- Company Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Job Title
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                Company Name • 2020 - 2023
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Example Work Card 2 -->
+      <a 
+        href="https://another-company.com" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- Company Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Previous Job Title
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                Previous Company • 2018 - 2020
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+
+    <!-- Education Content -->
+    <div id="education-content" class="content-section hidden space-y-4 max-w-[800px] mx-auto">
+      <!-- Example Education Card 1 -->
+      <a 
+        href="https://university.edu" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- School Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Degree Name
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                University Name • 2014 - 2018
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Example Education Card 2 -->
+      <a 
+        href="https://college.edu" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- School Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Certificate/Diploma Name
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                College Name • 2012 - 2014
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tab-button {
+    color: hsl(var(--color-muted-foreground));
+    position: relative;
+  }
+
+  .tab-button.active {
+    background: linear-gradient(135deg, hsl(var(--color-primary)) 0%, hsl(var(--color-accent)) 100%);
+    color: white;
+    box-shadow: 0 4px 12px hsla(var(--color-primary), 0.3);
+  }
+
+  .tab-button:not(.active):hover {
+    color: hsl(var(--color-foreground));
+    background-color: hsl(var(--color-muted));
+  }
+
+  .content-section {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const workTab = document.getElementById('work-tab');
+  const educationTab = document.getElementById('education-tab');
+  const workContent = document.getElementById('work-content');
+  const educationContent = document.getElementById('education-content');
+
+  workTab?.addEventListener('click', () => {
+    workTab.classList.add('active');
+    educationTab?.classList.remove('active');
+    workContent?.classList.remove('hidden');
+    educationContent?.classList.add('hidden');
+  });
+
+  educationTab?.addEventListener('click', () => {
+    educationTab.classList.add('active');
+    workTab?.classList.remove('active');
+    educationContent?.classList.remove('hidden');
+    workContent?.classList.add('hidden');
+  });
+</script>
