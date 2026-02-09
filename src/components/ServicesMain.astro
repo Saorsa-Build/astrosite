@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import coding from '../assets/services/coding.jpg';
+import camera from '../assets/services/camera.jpg';
+import computer from '../assets/services/computer.jpg';
 ---
 
 <Layout title="Our Services - Saorsa Media">
@@ -58,8 +61,8 @@ import Layout from '../layouts/Layout.astro';
             </li>
           </ul>
         </div>
-        <div class="aspect-square bg-gradient-to-br from-[hsl(var(--color-muted))] to-[hsl(var(--color-card))] rounded-2xl flex items-center justify-center">
-          <span class="text-[hsl(var(--color-muted-foreground))] text-sm">Website Design Visual</span>
+        <div class="aspect-square rounded-2xl overflow-hidden">
+          <img src={coding.src} alt="Website coding and development" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
@@ -69,8 +72,8 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 md:py-32 bg-[hsl(var(--color-muted))]">
     <div class="container mx-auto px-4 max-w-[1200px]">
       <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="aspect-square bg-gradient-to-br from-[hsl(var(--color-card))] to-[hsl(var(--color-background))] rounded-2xl flex items-center justify-center order-2 md:order-1">
-          <span class="text-[hsl(var(--color-muted-foreground))] text-sm">Content Creation Visual</span>
+        <div class="aspect-square rounded-2xl overflow-hidden order-2 md:order-1">
+          <img src={camera.src} alt="Professional photography and videography" class="w-full h-full object-cover" />
         </div>
         <div class="space-y-6 order-1 md:order-2">
           <p class="text-sm text-[hsl(var(--color-primary))] font-semibold uppercase tracking-wider">
@@ -154,8 +157,8 @@ import Layout from '../layouts/Layout.astro';
             </li>
           </ul>
         </div>
-        <div class="aspect-square bg-gradient-to-br from-[hsl(var(--color-muted))] to-[hsl(var(--color-card))] rounded-2xl flex items-center justify-center">
-          <span class="text-[hsl(var(--color-muted-foreground))] text-sm">IT Services Visual</span>
+        <div class="aspect-square rounded-2xl overflow-hidden">
+          <img src={computer.src} alt="IT support and computer management" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
