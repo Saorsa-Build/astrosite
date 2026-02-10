@@ -2,43 +2,39 @@
 // About.astro component
 ---
 
-<section class="py-20 md:py-32 bg-[hsl(var(--color-background))]">
+<section class="py-16 md:py-20 bg-[hsl(var(--color-background))]">
   <div class="container mx-auto px-4 max-w-[1200px]">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <!-- Left side - Portrait -->
-      <div class="flex justify-center md:justify-start">
-        <div class="w-80 h-80 rounded-2xl bg-gradient-to-br from-[hsl(var(--color-muted))] to-[hsl(var(--color-card))] flex items-center justify-center overflow-hidden">
-          <span class="text-[hsl(var(--color-muted-foreground))] text-sm">Portrait Photo</span>
+    <div class="bg-[hsl(var(--color-card))] rounded-2xl shadow-xl p-8 md:p-12">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left side - Portrait -->
+        <div class="flex justify-center">
+          <div class="w-80 h-80 rounded-xl bg-gradient-to-br from-[hsl(var(--color-muted))] to-[hsl(var(--color-secondary))] flex items-center justify-center overflow-hidden border-2 border-[hsl(var(--color-border))] shadow-lg">
+            <span class="text-[hsl(var(--color-muted-foreground))] text-sm">Portrait Photo</span>
+          </div>
         </div>
-      </div>
 
-      <!-- Right side - Info -->
-      <div class="space-y-6">
-        <div>
-          <h1 class="text-4xl md:text-5xl font-bold text-[hsl(var(--color-foreground))] mb-2">
-            Your Name
-          </h1>
-          <p class="text-xl text-[hsl(var(--color-primary))]">
-            Founder & Creative Developer
-          </p>
-        </div>
-        
-        <div class="space-y-4 text-lg text-[hsl(var(--color-muted-foreground))] leading-relaxed">
-          <p>
-            [Your background in software engineering - talk about your technical experience and what you've built]
-          </p>
+        <!-- Right side - Info -->
+        <div class="space-y-6">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-[hsl(var(--color-foreground))] mb-2">
+              Ethan Walker
+            </h1>
+            <p class="text-xl text-[hsl(var(--color-primary))] font-semibold">
+              Founder & Creative Developer
+            </p>
+          </div>
           
-          <p>
-            [Your IT experience - mention your work in IT support, infrastructure, or systems administration]
-          </p>
-          
-          <p>
-            [Your marketing background - describe your experience in digital marketing, content creation, or brand strategy]
-          </p>
-          
-          <p>
-            [Why you started Saorsa Media - what problem you're solving and your mission to help local businesses]
-          </p>
+          <div class="space-y-4 text-lg text-[hsl(var(--color-muted-foreground))] leading-relaxed">
+            <p>
+              My background spans software engineering, digital marketing, and IT support, giving me rare insight into where businesses struggle with their digital presence. 
+              I specialize in creating fast, SEO-optimized websites and capturing the content and stories that make your business 
+              stand out from the competition.
+            </p>
+            
+            <p>
+              My broad range of skills allows me to take your business from invisible in the digital world to leading your industry online.
+            </p>
+          </div>
         </div>
       </div>
     </div>

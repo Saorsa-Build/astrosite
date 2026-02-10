@@ -2,24 +2,24 @@
 // Experience.astro component
 ---
 
-<section class="py-20 md:py-32 bg-[hsl(var(--color-muted))]">
+<section class="py-16 md:py-20 bg-[hsl(var(--color-background))]">
   <div class="container mx-auto px-4 max-w-[1000px]">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-[hsl(var(--color-foreground))] mb-8">
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-[hsl(var(--color-foreground))] mb-8">
         Experience & Education
       </h2>
       
       <!-- Toggle -->
-      <div class="inline-flex rounded-xl border-2 border-[hsl(var(--color-border))] bg-[hsl(var(--color-card))] p-1.5 shadow-sm">
+      <div class="inline-flex rounded-lg border-2 border-[hsl(var(--color-border))] bg-[hsl(var(--color-card))] p-1 shadow-sm">
         <button 
           id="work-tab"
-          class="tab-button active px-8 py-3 rounded-lg text-sm font-semibold transition-all"
+          class="tab-button active px-6 py-2.5 rounded-md text-sm font-semibold transition-all cursor-pointer"
         >
           Work Experience
         </button>
         <button 
           id="education-tab"
-          class="tab-button px-8 py-3 rounded-lg text-sm font-semibold transition-all"
+          class="tab-button px-6 py-2.5 rounded-md text-sm font-semibold transition-all cursor-pointer"
         >
           Education
         </button>
@@ -27,13 +27,12 @@
     </div>
 
     <!-- Work Experience Content -->
-    <div id="work-content" class="content-section space-y-4 max-w-[800px] mx-auto">
-      <!-- Example Work Card 1 -->
+    <div id="work-content" class="content-section space-y-4 max-w-[800px]">
       <a 
-        href="https://example-company.com" 
+        href="https://www.acmetalfabricating.com/" 
         target="_blank"
         rel="noopener noreferrer"
-        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
       >
         <div class="flex items-center justify-between gap-6">
           <div class="flex items-center gap-4 flex-1 min-w-0">
@@ -42,11 +41,14 @@
               <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
-                Job Title
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Sales & Marketing Development Strategist
               </h3>
               <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
-                Company Name • 2020 - 2023
+                AC Metal Fabricating Limited, Cunningham Sheet Metal (Windsor) Limited
+              </p>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                Aug 2025 - Present
               </p>
             </div>
           </div>
@@ -56,12 +58,11 @@
         </div>
       </a>
 
-      <!-- Example Work Card 2 -->
       <a 
-        href="https://another-company.com" 
+        href="https://www.scelta.ca/" 
         target="_blank"
         rel="noopener noreferrer"
-        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
       >
         <div class="flex items-center justify-between gap-6">
           <div class="flex items-center gap-4 flex-1 min-w-0">
@@ -70,11 +71,74 @@
               <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
             </div>
             <div class="flex-1 min-w-0">
-              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] mb-1 group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
-                Previous Job Title
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Software Engineer
               </h3>
               <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
-                Previous Company • 2018 - 2020
+                Scelta Customs
+              </p>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                May 2025 - Aug 2025
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+
+      <a 
+        href="https://www.magna.com/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- Company Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                Software Developer
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                Magna International
+              </p>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                May 2024 - Aug 2024
+              </p>
+            </div>
+          </div>
+          <svg class="w-5 h-5 text-[hsl(var(--color-muted-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+      </a>
+
+      <a 
+        href="https://capscanada.com/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+      >
+        <div class="flex items-center justify-between gap-6">
+          <div class="flex items-center gap-4 flex-1 min-w-0">
+            <!-- Company Logo -->
+            <div class="w-14 h-14 bg-[hsl(var(--color-muted))] rounded-lg flex items-center justify-center flex-shrink-0 border border-[hsl(var(--color-border))] group-hover:border-[hsl(var(--color-primary))] transition-colors">
+              <span class="text-xs text-[hsl(var(--color-muted-foreground))]">Logo</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-base font-semibold text-[hsl(var(--color-foreground))] group-hover:text-[hsl(var(--color-primary))] transition-colors truncate">
+                IT Technician
+              </h3>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                CapsCanada Corporation
+              </p>
+              <p class="text-sm text-[hsl(var(--color-muted-foreground))]">
+                Dec 2022 - Apr 2024
               </p>
             </div>
           </div>
@@ -86,13 +150,13 @@
     </div>
 
     <!-- Education Content -->
-    <div id="education-content" class="content-section hidden space-y-4 max-w-[800px] mx-auto">
+    <div id="education-content" class="content-section hidden space-y-4 max-w-[800px]">
       <!-- Example Education Card 1 -->
       <a 
         href="https://university.edu" 
         target="_blank"
         rel="noopener noreferrer"
-        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
       >
         <div class="flex items-center justify-between gap-6">
           <div class="flex items-center gap-4 flex-1 min-w-0">
@@ -120,7 +184,7 @@
         href="https://college.edu" 
         target="_blank"
         rel="noopener noreferrer"
-        class="group block bg-[hsl(var(--color-card))] border border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
+        class="group block bg-[hsl(var(--color-card))] border-2 border-[hsl(var(--color-border))] rounded-lg p-5 hover:border-[hsl(var(--color-primary))] hover:shadow-md transition-all no-underline"
       >
         <div class="flex items-center justify-between gap-6">
           <div class="flex items-center gap-4 flex-1 min-w-0">
@@ -149,13 +213,11 @@
 <style>
   .tab-button {
     color: hsl(var(--color-muted-foreground));
-    position: relative;
   }
 
   .tab-button.active {
-    background: linear-gradient(135deg, hsl(var(--color-primary)) 0%, hsl(var(--color-accent)) 100%);
+    background-color: hsl(var(--color-primary));
     color: white;
-    box-shadow: 0 4px 12px hsla(var(--color-primary), 0.3);
   }
 
   .tab-button:not(.active):hover {
