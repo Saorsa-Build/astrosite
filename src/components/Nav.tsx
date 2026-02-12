@@ -1,6 +1,7 @@
 "use client";
 
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import LogoImage from "@/assets/logo.png";
 
 import { cn } from "@/lib/utils";
 
@@ -59,10 +60,10 @@ interface Navbar1Props {
 
 const Nav = ({
   logo = {
-    url: "https://www.shadcnblocks.com",
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
-    alt: "logo",
-    title: "Shadcnblocks.com",
+    url: "/",
+    src: LogoImage.src,
+    alt: "Saorsa logo",
+    title: "Saorsa Media",
   },
   menu = [
     { title: "Home", url: "#" },
@@ -152,7 +153,7 @@ const Nav = ({
             <a href={logo.url} className="flex items-center gap-2">
               <img
                 src={logo.src}
-                className="max-h-8 dark:invert"
+                className="max-h-10"
                 alt={logo.alt}
               />
               <span className="text-lg font-semibold tracking-tighter">
@@ -184,7 +185,7 @@ const Nav = ({
             <a href={logo.url} className="flex items-center gap-2">
               <img
                 src={logo.src}
-                className="max-h-8 dark:invert"
+                className="max-h-16"
                 alt={logo.alt}
               />
             </a>
@@ -200,7 +201,7 @@ const Nav = ({
                     <a href={logo.url} className="flex items-center gap-2">
                       <img
                         src={logo.src}
-                        className="max-h-8 dark:invert"
+                        className="max-h-10"
                         alt={logo.alt}
                       />
                     </a>
