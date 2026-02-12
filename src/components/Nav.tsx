@@ -1,6 +1,6 @@
 "use client";
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Video, Menu, SquareCode } from "lucide-react";
 import LogoImage from "@/assets/logo.png";
 
 import { cn } from "@/lib/utils";
@@ -46,16 +46,6 @@ interface Navbar1Props {
     className?: string;
   };
   menu?: MenuItem[];
-  auth?: {
-    login: {
-      title: string;
-      url: string;
-    };
-    signup: {
-      title: string;
-      url: string;
-    };
-  };
 }
 
 const Nav = ({
@@ -68,79 +58,32 @@ const Nav = ({
   menu = [
     { title: "Home", url: "#" },
     {
-      title: "Products",
+      title: "Services",
       url: "#",
       items: [
         {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
+          title: "Content Capture",
+          description: "On-site professional photography & videography",
+          icon: <Video className="size-5 shrink-0" />,
           url: "#",
         },
         {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
+          title: "Website Development",
+          description: "Designed and built from the ground up, tailored to your business",
+          icon: <SquareCode className="size-5 shrink-0" />,
           url: "#",
         },
       ],
     },
     {
-      title: "Resources",
-      url: "#",
-      items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Pricing",
+      title: "About",
       url: "#",
     },
     {
-      title: "Blog",
+      title: "Contact",
       url: "#",
     },
   ],
-  auth = {
-    login: { title: "Login", url: "#" },
-    signup: { title: "Sign up", url: "#" },
-  },
   className,
 }: Navbar1Props) => {
   return (
@@ -168,14 +111,6 @@ const Nav = ({
               </NavigationMenu>
             </div>
           </div>
-          <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.title}</a>
-            </Button>
-          </div>
         </nav>
 
         {/* Mobile Menu */}
@@ -185,7 +120,7 @@ const Nav = ({
             <a href={logo.url} className="flex items-center gap-2">
               <img
                 src={logo.src}
-                className="max-h-16"
+                className="max-h-12"
                 alt={logo.alt}
               />
             </a>
@@ -201,7 +136,7 @@ const Nav = ({
                     <a href={logo.url} className="flex items-center gap-2">
                       <img
                         src={logo.src}
-                        className="max-h-10"
+                        className="max-h-12"
                         alt={logo.alt}
                       />
                     </a>
@@ -215,15 +150,6 @@ const Nav = ({
                   >
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
-
-                  <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <a href={auth.login.url}>{auth.login.title}</a>
-                    </Button>
-                    <Button asChild>
-                      <a href={auth.signup.url}>{auth.signup.title}</a>
-                    </Button>
-                  </div>
                 </div>
               </SheetContent>
             </Sheet>

@@ -19,14 +19,6 @@ interface Hero3Props {
       url: string;
     };
   };
-  reviews?: {
-    count: number;
-    avatars: {
-      src: string;
-      alt: string;
-    }[];
-    rating?: number;
-  };
   className?: string;
 }
 
@@ -35,11 +27,11 @@ const Hero3 = ({
   description = "Finely crafted by Ethan Walker; a Marketing Specialist and Software Engineer based in Windsor, Ontario",
   buttons = {
     primary: {
-      text: "Sign Up",
+      text: "Contact",
       url: "https://www.shadcnblocks.com",
     },
     secondary: {
-      text: "Get Started",
+      text: "Learn More",
       url: "https://www.shadcnblocks.com",
     },
   },
