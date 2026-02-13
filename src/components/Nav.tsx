@@ -77,7 +77,7 @@ const Nav = ({
     },
     {
       title: "About",
-      url: "#",
+      url: "/about",
     },
     {
       title: "Contact",

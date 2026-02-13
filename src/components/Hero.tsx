@@ -2,7 +2,6 @@ import { ArrowDownRight, Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
 interface Hero3Props {
