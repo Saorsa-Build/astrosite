@@ -23,15 +23,15 @@ interface Hero3Props {
 
 const Hero3 = ({
   heading = "Building Premium SEO Friendly Websites",
-  description = "Finely crafted by Ethan Walker; a Marketing Specialist and Software Engineer based in Windsor, Ontario",
+  description = "Finely crafted by Ethan Walker; a Marketing Specialist and Software Engineer based in Windsor, Ontario.",
   buttons = {
     primary: {
       text: "Contact",
-      url: "https://www.shadcnblocks.com",
+      url: "/contact",
     },
     secondary: {
       text: "Learn More",
-      url: "https://www.shadcnblocks.com",
+      url: "/about",
     },
   },
   className,

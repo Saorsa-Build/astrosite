@@ -71,7 +71,7 @@ const Nav = ({
           title: "Website Development",
           description: "Designed and built from the ground up, tailored to your business",
           icon: <SquareCode className="size-5 shrink-0" />,
-          url: "#",
+          url: "/development",
         },
       ],
     },
@@ -81,7 +81,7 @@ const Nav = ({
     },
     {
       title: "Contact",
-      url: "#",
+      url: "/contact",
     },
   ],
   className,
