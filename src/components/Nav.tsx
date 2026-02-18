@@ -99,7 +99,7 @@ const Nav = ({
                 className="max-h-10"
                 alt={logo.alt}
               />
-              <span className="text-lg font-semibold tracking-tighter">
+              <span className="text-lg font-semibold tracking-tighter" style={{ color: "var(--foreground)" }}>
                 {logo.title}
               </span>
             </a>
@@ -126,11 +126,26 @@ const Nav = ({
             </a>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  style={{
+                    borderColor: "var(--border)",
+                    color: "var(--foreground)",
+                    background: "var(--card)",
+                  }}
+                >
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+              <SheetContent
+                style={{
+                  background: "var(--card)",
+                  borderColor: "var(--border)",
+                  color: "var(--foreground)",
+                }}
+                className="overflow-y-auto"
+              >
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
@@ -164,8 +179,14 @@ const renderMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <NavigationMenuItem key={item.title}>
-        <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-popover text-popover-foreground">
+        <NavigationMenuTrigger
+          style={{ color: "var(--foreground)", background: "transparent" }}
+        >
+          {item.title}
+        </NavigationMenuTrigger>
+        <NavigationMenuContent
+          style={{ background: "var(--popover)", color: "var(--popover-foreground)" }}
+        >
           {item.items.map((subItem) => (
             <NavigationMenuLink asChild key={subItem.title} className="w-80">
               <SubMenuLink item={subItem} />
@@ -180,7 +201,16 @@ const renderMenuItem = (item: MenuItem) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-accent-foreground"
+        className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
+        style={{ color: "var(--foreground)", background: "transparent" }}
+        onMouseOver={(e) => {
+          (e.currentTarget as HTMLElement).style.background = "var(--muted)";
+          (e.currentTarget as HTMLElement).style.color = "var(--accent-foreground)";
+        }}
+        onMouseOut={(e) => {
+          (e.currentTarget as HTMLElement).style.background = "transparent";
+          (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
+        }}
       >
         {item.title}
       </NavigationMenuLink>
@@ -192,7 +222,10 @@ const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
+        <AccordionTrigger
+          className="text-md py-0 font-semibold hover:no-underline"
+          style={{ color: "var(--foreground)" }}
+        >
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -205,7 +238,12 @@ const renderMobileMenuItem = (item: MenuItem) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="text-md font-semibold">
+    <a
+      key={item.title}
+      href={item.url}
+      className="text-md font-semibold"
+      style={{ color: "var(--foreground)" }}
+    >
       {item.title}
     </a>
   );
@@ -214,14 +252,23 @@ const renderMobileMenuItem = (item: MenuItem) => {
 const SubMenuLink = ({ item }: { item: MenuItem }) => {
   return (
     <a
-      className="flex min-w-80 flex-row gap-4 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-muted hover:text-accent-foreground"
+      className="flex min-w-80 flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none select-none transition-colors"
       href={item.url}
+      style={{ color: "var(--foreground)" }}
+      onMouseOver={(e) => {
+        (e.currentTarget as HTMLElement).style.background = "var(--muted)";
+        (e.currentTarget as HTMLElement).style.color = "var(--accent-foreground)";
+      }}
+      onMouseOut={(e) => {
+        (e.currentTarget as HTMLElement).style.background = "transparent";
+        (e.currentTarget as HTMLElement).style.color = "var(--foreground)";
+      }}
     >
-      <div className="text-foreground">{item.icon}</div>
+      <div style={{ color: "var(--primary)" }}>{item.icon}</div>
       <div>
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (
-          <p className="text-sm leading-snug text-muted-foreground">
+          <p className="text-sm leading-snug" style={{ color: "var(--muted-foreground)" }}>
             {item.description}
           </p>
         )}
