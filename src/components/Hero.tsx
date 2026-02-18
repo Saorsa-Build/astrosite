@@ -30,7 +30,7 @@ const Hero3 = ({
       url: "/contact",
     },
     secondary: {
-      text: "Learn More",
+      text: "About Saorsa Media",
       url: "/about",
     },
   },
