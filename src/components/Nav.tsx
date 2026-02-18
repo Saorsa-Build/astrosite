@@ -56,7 +56,7 @@ const Nav = ({
     title: "Saorsa Media",
   },
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "/" },
     {
       title: "Services",
       url: "#",
@@ -65,7 +65,7 @@ const Nav = ({
           title: "Content Capture",
           description: "On-site professional photography & videography",
           icon: <Video className="size-5 shrink-0" />,
-          url: "#",
+          url: "/content",
         },
         {
           title: "Website Development",
