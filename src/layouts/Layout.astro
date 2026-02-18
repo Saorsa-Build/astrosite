@@ -5,15 +5,20 @@ import '../styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = "Saorsa Media" } = Astro.props;
+const { 
+  title = "Saorsa Media", 
+  description = "Saorsa Media builds premium, SEO-friendly websites and creates professional video content for businesses in Windsor, Ontario." 
+  } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
   </head>
