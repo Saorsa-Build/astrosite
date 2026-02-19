@@ -21,7 +21,7 @@ import Layout from '../layouts/Layout.astro';
   <div class="relative container mx-auto px-4 max-w-[860px]">
 
     <!-- Header -->
-    <div class="mb-10 rounded-2xl p-8 bg-card/75 backdrop-blur-sm border border-border/30">
+    <div class="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
       <p class="text-xs font-mono tracking-[0.2em] uppercase text-muted-foreground mb-4">
         Get in touch
       </p>
@@ -37,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Card -->
-    <div class="rounded-2xl p-8 md:p-12 shadow-lg bg-card/75 backdrop-blur-sm border border-border">
+    <div class="rounded-2xl p-8 md:p-12 shadow-lg bg-card/95 backdrop-blur-sm border border-border">
       <form
         action="https://formspree.io/f/mojlondj"
         method="POST"
@@ -107,8 +107,6 @@ import Layout from '../layouts/Layout.astro';
             {[
               { value: "Website Creation & Hosting", desc: "Custom websites and reliable hosting solutions" },
               { value: "Domain Management & Custom Emails", desc: "Professional email addresses and domain setup" },
-              { value: "Social Media Setup & Branding", desc: "One-time setup and brand presence establishment" },
-              { value: "Social Media Management", desc: "Ongoing content creation and posting" },
             ].map(({ value, desc }) => (
               <label class="group flex items-start gap-3 p-4 rounded-xl border border-border bg-card/50 cursor-pointer transition-all duration-200 hover:border-primary/50 hover:bg-accent has-[:checked]:border-primary has-[:checked]:bg-accent">
                 <input

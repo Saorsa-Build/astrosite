@@ -37,9 +37,9 @@ const Hero3 = ({
   className,
 }: Hero3Props) => {
   return (
-    <section className={cn("py-20", className)}>
+    <section className={cn("py-10", className)}>
       <div className="container">
-        <div className="grid bg-card/75 backdrop-blur-sm border border-border/30 rounded-2xl p-8 md:p-12 items-center gap-10 lg:grid-cols-2 lg:gap-20">
+        <div className="grid bg-card/90 backdrop-blur-sm border border-border/30 rounded-2xl p-8 md:p-12 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="mx-auto flex flex-col items-center text-center md:ml-auto lg:max-w-3xl lg:items-start lg:text-left">
             <h1 className="my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl xl:text-7xl">
               {heading}
