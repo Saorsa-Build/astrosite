@@ -59,24 +59,22 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
 
   const stats = [
     {
-      // Adobe CC
-      icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/adobe-icon.png",
+      icon: "/logos/adobe.png",
       title: "Adobe Creative Cloud",
       description: "Photoshop · Premiere Pro · Illustrator · After Effects",
+      iconClassName: "h-11 w-11 object-contain",
     },
     {
-      // Sony — using a camera emoji SVG fallback since no CDN logo available
-      icon: null,
-      emoji: "📷",
+      icon: "/logos/sony.svg",
       title: "Sony A7 III + Gimbal",
       description: "Full-frame mirrorless · 4K · stabilised cinematic footage",
+      iconClassName: "h-16 w-16 object-contain",
     },
     {
-      // DJI / drone
-      icon: null,
-      emoji: "🚁",
+      icon: "/logos/dji.png",
       title: "DJI Drone",
       description: "Aerial stills & video · cinematic flyovers",
+      iconClassName: "h-11 w-11 object-contain",
     },
   ];
 
@@ -133,16 +131,12 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
                   key={index}
                   className="rounded-lg bg-muted/50 p-6 text-center"
                 >
-                  <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center">
-                    {stat.icon ? (
-                      <img
-                        src={stat.icon}
-                        alt={stat.title}
-                        className="h-8 w-8 object-contain"
-                      />
-                    ) : (
-                      <span className="text-3xl">{stat.emoji}</span>
-                    )}
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center">
+                    <img
+                      src={stat.icon}
+                      alt={stat.title}
+                      className={stat.iconClassName}
+                    />
                   </div>
                   <div className="space-y-2">
                     <div className="text-sm font-medium">{stat.title}</div>

@@ -52,19 +52,22 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
 
   const stats = [
     {
-      icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/astro-icon.svg",
+      icon: "/logos/astrojs.png",
       title: "AstroJS",
       description: "Static-first headless frontend — zero-JS by default",
+      iconClassName: "h-11 w-11 object-contain",
     },
     {
-      icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shopify-icon.svg",
+      icon: "/logos/shopify.png",
       title: "Shopify Storefront API",
       description: "Optional headless commerce layer — only when you need it",
+      iconClassName: "h-11 w-11 object-contain",
     },
     {
-      icon: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/tailwind-icon.svg",
+      icon: "/logos/tailwindcss.svg",
       title: "Tailwind + shadcn",
       description: "Lean, utility-first CSS with no render-blocking styles",
+      iconClassName: "h-11 w-11 object-contain",
     },
   ];
 
@@ -124,7 +127,7 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
                     <img
                       src={stat.icon}
                       alt={stat.title}
-                      className="h-8 w-8 object-contain"
+                      className={stat.iconClassName}
                     />
                   </div>
                   <div className="space-y-2">
