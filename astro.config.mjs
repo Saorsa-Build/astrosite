@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://saorsa.ca',
+  site: 'https://www.saorsa.ca',
   integrations: [react(), sitemap()],
 
   vite: {
