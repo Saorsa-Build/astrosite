@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://www.saorsa.ca/:path*",
-      "permanent": true
-    }
-  ]
-}
