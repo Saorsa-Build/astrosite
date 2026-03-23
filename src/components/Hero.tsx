@@ -1,7 +1,6 @@
 import { ArrowDownRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-
 import { Button } from "@/components/ui/button";
 
 interface Hero3Props {
@@ -38,46 +37,39 @@ const Hero3 = ({
 }: Hero3Props) => {
   return (
     <section className={cn("py-5", className)}>
-      <div className="container max-w-[860px] px-4">
-        <div className="grid bg-card/90 backdrop-blur-sm border border-border/30 rounded-2xl p-8 md:p-12 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <div className="mx-auto flex flex-col items-center text-center md:ml-auto lg:max-w-3xl lg:items-start lg:text-left">
-            <h1 className="my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl xl:text-7xl">
+      <div className="container px-4">
+        <div className="rounded-2xl bg-black/20 backdrop-blur-lg border border-white/10 p-8 md:p-12">
+          <div className="flex flex-col items-start text-left">
+            <h1 className="my-6 text-4xl font-bold text-pretty text-white lg:text-6xl xl:text-7xl">
               {heading}
             </h1>
-            <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
+            <p className="mb-8 max-w-xl text-white/70 lg:text-xl">
               {description}
             </p>
-            <div className="flex flex-row justify-center gap-2 lg:justify-start">
-            {buttons.primary && (
-              <Button
-                asChild
-                size="sm"
-                className="flex-1 max-w-[180px] bg-primary text-primary-foreground hover:opacity-85"
-              >
-                <a href={buttons.primary.url}>{buttons.primary.text}</a>
-              </Button>
-            )}
-            {buttons.secondary && (
-              <Button
-                asChild
-                size="sm"
-                variant="outline"
-                className="flex-1 max-w-[180px] border-border text-foreground bg-muted hover:bg-accent hover:text-accent-foreground hover:border-ring"
-              >
-                <a href={buttons.secondary.url}>
-                  {buttons.secondary.text}
-                  <ArrowDownRight className="size-4" />
-                </a>
-              </Button>
-            )}
-          </div>
-          </div>
-          <div className="flex">
-            <img
-              src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"
-              alt="placeholder hero"
-              className="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
-            />
+            <div className="flex flex-row gap-2">
+              {buttons.primary && (
+                <Button
+                  asChild
+                  size="sm"
+                  className="flex-1 max-w-[180px] bg-white text-black hover:opacity-85"
+                >
+                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
+                </Button>
+              )}
+              {buttons.secondary && (
+                <Button
+                  asChild
+                  size="sm"
+                  variant="outline"
+                  className="flex-1 max-w-[180px] border-white/10 text-white bg-black/20 hover:bg-white/10 hover:text-white hover:border-white/20"
+                >
+                  <a href={buttons.secondary.url}>
+                    {buttons.secondary.text}
+                    <ArrowDownRight className="size-4" />
+                  </a>
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>
