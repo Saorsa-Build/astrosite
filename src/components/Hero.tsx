@@ -37,7 +37,7 @@ const Hero3 = ({
 }: Hero3Props) => {
   return (
     <section className={cn("py-5", className)}>
-      <div className="container px-4">
+      <div className="container">
         <div className="rounded-2xl bg-black/30 backdrop-blur-lg border border-white/10 p-8 md:p-12">
           <div className="flex flex-col items-start text-left">
             <h1 className="my-4 text-4xl font-bold text-pretty text-white lg:text-6xl xl:text-7xl">
