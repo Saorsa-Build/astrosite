@@ -1,5 +1,4 @@
 import React from "react";
-
 import { cn } from "@/lib/utils";
 
 interface About15Props {
@@ -8,15 +7,14 @@ interface About15Props {
 
 const About15 = ({ className }: About15Props) => {
   return (
-    <section className={cn("py-22 text-white", className)}>
-      <div className="container flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-[10vw]">
+    <section className={cn("py-5", className)}>
+      <div className="container max-w-[860px] px-4">
 
-        {/* Card wrapper */}
-        <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30 w-full max-w-4xl">
-          <div className="flex flex-col items-center justify-center gap-12 lg:flex-row lg:gap-16">
+        <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
+          <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
 
             {/* Photo card */}
-            <div className="w-full max-w-xs shrink-0 border-2 border-white bg-white p-1">
+            <div className="mx-auto w-full max-w-[260px] shrink-0 lg:mx-0 border-2 border-white bg-white p-1 self-start">
               <img
                 src=""
                 alt="Ethan Walker"
@@ -47,27 +45,27 @@ const About15 = ({ className }: About15Props) => {
             </div>
 
             {/* Copy */}
-            <div className="w-full max-w-lg space-y-6 px-4 lg:px-0">
+            <div className="w-full space-y-6">
               <h1 className="text-3xl lg:text-5xl font-semibold tracking-tight lg:tracking-tighter">
                 I build the website{" "}
                 <span className="font-serif italic">and</span>{" "}
                 shoot the content to fill it.
               </h1>
-              <p className="text-sm lg:text-base leading-relaxed">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
                 My name is Ethan, I'm a web developer and content creator who got tired
                 of watching great businesses hand off their site to one agency
                 and their photography to another, then spend months waiting for
                 a lackluster result. I do both, which means your
                 visuals are designed for the pages they'll live on from day one.
               </p>
-              <p className="text-sm lg:text-base leading-relaxed">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
                 On the development side, I specialise in AstroJS and Shopify
                 storefronts built with SEO baked in. On the
                 content side, I shoot with my own equipment, then edit everything in Adobe
                 Creative Cloud. The result is a site that loads fast, ranks
                 well, and actually looks like your brand.
               </p>
-              <p className="text-sm lg:text-base leading-relaxed">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
                 If you want to work with someone who cares as much about your
                 Google ranking as your grid aesthetic,{" "}
                 <a

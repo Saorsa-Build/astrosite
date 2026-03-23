@@ -37,8 +37,8 @@ const Hero3 = ({
   className,
 }: Hero3Props) => {
   return (
-    <section className={cn("py-10", className)}>
-      <div className="container">
+    <section className={cn("py-5", className)}>
+      <div className="container max-w-[860px] px-4">
         <div className="grid bg-card/90 backdrop-blur-sm border border-border/30 rounded-2xl p-8 md:p-12 items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="mx-auto flex flex-col items-center text-center md:ml-auto lg:max-w-3xl lg:items-start lg:text-left">
             <h1 className="my-6 text-4xl font-bold text-pretty text-foreground lg:text-6xl xl:text-7xl">
@@ -47,28 +47,30 @@ const Hero3 = ({
             <p className="mb-8 max-w-xl text-muted-foreground lg:text-xl">
               {description}
             </p>
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              {buttons.primary && (
-                <Button
-                  asChild
-                  className="w-full sm:w-auto bg-primary text-primary-foreground hover:opacity-85"
-                >
-                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
-                </Button>
-              )}
-              {buttons.secondary && (
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full sm:w-auto border-border text-foreground bg-muted hover:bg-accent hover:text-accent-foreground hover:border-ring"
-                >
-                  <a href={buttons.secondary.url}>
-                    {buttons.secondary.text}
-                    <ArrowDownRight className="size-4" />
-                  </a>
-                </Button>
-              )}
-            </div>
+            <div className="flex flex-row justify-center gap-2 lg:justify-start">
+            {buttons.primary && (
+              <Button
+                asChild
+                size="sm"
+                className="flex-1 max-w-[180px] bg-primary text-primary-foreground hover:opacity-85"
+              >
+                <a href={buttons.primary.url}>{buttons.primary.text}</a>
+              </Button>
+            )}
+            {buttons.secondary && (
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                className="flex-1 max-w-[180px] border-border text-foreground bg-muted hover:bg-accent hover:text-accent-foreground hover:border-ring"
+              >
+                <a href={buttons.secondary.url}>
+                  {buttons.secondary.text}
+                  <ArrowDownRight className="size-4" />
+                </a>
+              </Button>
+            )}
+          </div>
           </div>
           <div className="flex">
             <img

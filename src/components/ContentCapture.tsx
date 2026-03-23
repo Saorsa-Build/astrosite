@@ -94,23 +94,17 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
   ];
 
   return (
-    <section className={cn("py-20", className)}>
-      <div className="container max-w-3xl">
+    <section className={cn("py-5", className)}>
+      <div className="container max-w-[860px] px-4">
         <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
 
           {/* Icon and Intro */}
-          <div className="mb-12 space-y-8 text-center">
-            <div className="flex justify-center">
-              <div className="rounded-lg bg-muted p-4">
-                <Camera className="h-12 w-12 text-primary" />
-              </div>
-            </div>
-
+          <div className="mb-12 space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
                 Content Capture
               </h1>
-              <p className="text-xl leading-relaxed text-muted-foreground">
+              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
                 We shoot, edit, and deliver professional photo and video content
                 using a full-frame Sony A7 III, gimbal-stabilised rigs, and
                 aerial drone footage — then bring everything to life in Adobe

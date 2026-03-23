@@ -87,23 +87,17 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
   ];
 
   return (
-    <section className={cn("py-20", className)}>
-      <div className="container max-w-3xl">
+    <section className={cn("py-5", className)}>
+      <div className="container max-w-[860px] px-4">
         <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
 
           {/* Icon and Intro */}
-          <div className="mb-12 space-y-8 text-center">
-            <div className="flex justify-center">
-              <div className="rounded-lg bg-muted p-4">
-                <Code className="h-12 w-12 text-primary" />
-              </div>
-            </div>
-
+          <div className="mb-12 space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
                 Web Development
               </h1>
-              <p className="text-xl leading-relaxed text-muted-foreground">
+              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
                 Whether you need a sharp business website or a headless Shopify
                 storefront, I build on AstroJS — fast, SEO-first, and designed
                 to look nothing like a template. One stack, two use cases, zero
