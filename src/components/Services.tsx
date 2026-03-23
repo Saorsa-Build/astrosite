@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 import codingImg from "@/assets/services/coding.jpg";
-import cameraImg from "@/assets/services/camera.jpg";
+import cameraImg from "@/assets/services/filming.jpg";
 
 type ServiceProps = {
   title: string;
@@ -38,11 +38,11 @@ const Services = ({ className }: Services11Props) => {
     <section className={cn("py-5", className)}>
       <div className="container grid grid-cols-1 gap-10 lg:grid-cols-3">
         <div className="flex flex-col justify-between lg:col-span-1">
-            <div className="rounded-2xl bg-black/20 backdrop-blur-lg p-6 border border-white/10">
+            <div className="rounded-2xl bg-black/30 backdrop-blur-lg p-6 border border-white/10">
                 <h2 className="mb-4 text-4xl font-medium text-white md:text-6xl">
                 Our Services
                 </h2>
-                <p className="w-72 text-base tracking-tight text-white/70">
+                <p className="w-72 text-base tracking-tight text-white/85">
                     We build fast, SEO-ready websites and shoot professional photo and video content — everything you need to show up online and look the part.
                 </p>
             </div>

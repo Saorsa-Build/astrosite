@@ -95,8 +95,8 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
 
   return (
     <section className={cn("py-5", className)}>
-      <div className="container max-w-[860px] px-4">
-        <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
+      <div className="container max-w-[860px] px-4 ">
+        <div className="mb-10 rounded-2xl p-8 bg-black/30 backdrop-blur-lg border border-border/30 ">
 
           {/* Icon and Intro */}
           <div className="mb-12 space-y-8">
@@ -104,7 +104,7 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
               <h1 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
                 Content Capture
               </h1>
-              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
+              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground text-white/85">
                 We shoot, edit, and deliver professional photo and video content
                 using a full-frame Sony A7 III, gimbal-stabilised rigs, and
                 aerial drone footage — then bring everything to life in Adobe
@@ -144,7 +144,7 @@ const ContentCapture = ({ className }: ContentCaptureProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="mx-auto prose prose-sm mb-16 max-w-none dark:prose-invert">
+          <div className="mx-auto prose prose-sm mb-16 max-w-none dark:prose-invert text-white/85">
             <h2>Full-Production Content, Start to Finish</h2>
             <p>
               Great content starts with great capture. We shoot on the Sony A7

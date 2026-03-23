@@ -10,7 +10,7 @@ const About15 = ({ className }: About15Props) => {
     <section className={cn("py-5", className)}>
       <div className="container max-w-[860px] px-4">
 
-        <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
+        <div className="mb-10 rounded-2xl p-8 bg-black/30 backdrop-blur-lg border border-border/30">
           <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
 
             {/* Photo card */}
@@ -51,21 +51,21 @@ const About15 = ({ className }: About15Props) => {
                 <span className="font-serif italic">and</span>{" "}
                 shoot the content to fill it.
               </h1>
-              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground text-white/85">
                 My name is Ethan, I'm a web developer and content creator who got tired
                 of watching great businesses hand off their site to one agency
                 and their photography to another, then spend months waiting for
                 a lackluster result. I do both, which means your
                 visuals are designed for the pages they'll live on from day one.
               </p>
-              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground text-white/85">
                 On the development side, I specialise in AstroJS and Shopify
                 storefronts built with SEO baked in. On the
                 content side, I shoot with my own equipment, then edit everything in Adobe
                 Creative Cloud. The result is a site that loads fast, ranks
                 well, and actually looks like your brand.
               </p>
-              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground">
+              <p className="text-sm lg:text-base leading-relaxed text-muted-foreground text-white/85">
                 If you want to work with someone who cares as much about your
                 Google ranking as your grid aesthetic,{" "}
                 <a

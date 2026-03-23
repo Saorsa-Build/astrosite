@@ -89,7 +89,7 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
   return (
     <section className={cn("py-5", className)}>
       <div className="container max-w-[860px] px-4">
-        <div className="mb-10 rounded-2xl p-8 bg-card/95 backdrop-blur-sm border border-border/30">
+        <div className="mb-10 rounded-2xl p-8 bg-black/30 backdrop-blur-lg border border-border/30">
 
           {/* Icon and Intro */}
           <div className="mb-12 space-y-8">
@@ -97,7 +97,7 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
               <h1 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl">
                 Web Development
               </h1>
-              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground">
+              <p className="max-w-2xl text-xl leading-relaxed text-muted-foreground text-white/85">
                 Whether you need a sharp business website or a headless Shopify
                 storefront, I build on AstroJS — fast, SEO-first, and designed
                 to look nothing like a template. One stack, two use cases, zero
@@ -136,7 +136,7 @@ const WebsiteDevelopment = ({ className }: WebDevelopmentSEOProps) => {
           </div>
 
           {/* Main Content */}
-          <div className="mx-auto prose prose-sm mb-16 max-w-none dark:prose-invert">
+          <div className="mx-auto prose prose-sm mb-16 max-w-none dark:prose-invert text-white/85">
             <h2>One Framework, Built for Both</h2>
             <p>
               Not every business needs a Shopify storefront. A lot of people
