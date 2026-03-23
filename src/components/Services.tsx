@@ -21,7 +21,7 @@ const services: ServiceProps[] = [
   },
   {
     title: "Content Capture",
-    image: "/src/assets/services/camera.jpg",
+    image: "/src/assets/services/filming.jpg",
     url: "/content",
   },
 ];
