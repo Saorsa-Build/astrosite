@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
+import codingImg from "@/assets/services/coding.jpg";
+import cameraImg from "@/assets/services/camera.jpg";
+
 type ServiceProps = {
   title: string;
   image: string;
@@ -16,12 +19,12 @@ type ServiceProps = {
 const services: ServiceProps[] = [
   {
     title: "Web Development",
-    image: "/src/assets/services/coding.jpg",
+    image: codingImg.src,
     url: "/development",
   },
   {
     title: "Content Capture",
-    image: "/src/assets/services/filming.jpg",
+    image: cameraImg.src,
     url: "/content",
   },
 ];
