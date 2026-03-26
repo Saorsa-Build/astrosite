@@ -205,7 +205,7 @@ const renderMobileMenuItem = (item: MenuItem) => {
         </AccordionTrigger>
         <AccordionContent className="mt-2">
           {item.items.map((subItem) => (
-            <SubMenuLink key={subItem.title} item={subItem} />
+            <MobileSubMenuLink key={subItem.title} item={subItem} />
           ))}
         </AccordionContent>
       </AccordionItem>
@@ -234,6 +234,25 @@ const SubMenuLink = ({ item }: { item: MenuItem }) => {
         <div className="text-sm font-semibold">{item.title}</div>
         {item.description && (
           <p className="text-sm leading-snug text-muted-foreground">
+            {item.description}
+          </p>
+        )}
+      </div>
+    </a>
+  );
+};
+
+const MobileSubMenuLink = ({ item }: { item: MenuItem }) => {
+  return (
+    <a
+      className="flex w-full flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none select-none transition-colors text-foreground hover:bg-muted hover:text-accent-foreground"
+      href={item.url}
+    >
+      <div className="text-primary shrink-0">{item.icon}</div>
+      <div className="min-w-0">
+        <div className="text-sm font-semibold">{item.title}</div>
+        {item.description && (
+          <p className="text-sm leading-snug text-muted-foreground break-words">
             {item.description}
           </p>
         )}

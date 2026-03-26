@@ -32,8 +32,8 @@ const services: ServiceProps[] = [
 ];
 
 const portfolioLogos = [
-  { src: slbLogo.src, alt: "SLB", url: "https://www.spencelb.com/" },
   { src: acmetalLogo.src, alt: "AC Metal", url: "https://www.acmetalfabricating.com/" },
+  { src: slbLogo.src, alt: "SLB", url: "https://www.spencelb.com/" },
 ];
 
 interface Services11Props {
